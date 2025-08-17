@@ -30,3 +30,7 @@ project-root/
 │── backend/        # Express + MongoDB backend  
 │── frontend/       # React + TailwindCSS frontend  
 │── README.md       # Project documentation (this file)  
+⚡ Setup Instructions
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/saas-rbac-dashboard.git
+cd saas-rbac-dashboard
