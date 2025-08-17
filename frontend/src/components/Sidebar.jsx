@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { useTheme } from "../context/ThemeContext"; // ✅ Theme import
+import { useTheme } from "../context/ThemeContext"; 
 
 export default function Sidebar() {
   const { user } = useAuth();
-  const { theme } = useTheme(); // ✅ get theme from context
+  const { theme } = useTheme(); 
   const [collapsed, setCollapsed] = useState(false);
 
   useEffect(() => {

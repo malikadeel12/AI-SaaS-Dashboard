@@ -4,8 +4,8 @@ import { createContext, useContext, useState } from "react";
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);   // { role, username, email }
-  const [token, setToken] = useState(null); // JWT access token
+  const [user, setUser] = useState(null);   
+  const [token, setToken] = useState(null); 
 
   const login = (userData, accessToken) => {
     setUser(userData);

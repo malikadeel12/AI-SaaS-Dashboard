@@ -5,11 +5,11 @@ import { AuthProvider, useAuth } from "./context/AuthContext";
 import { ThemeProvider } from "./context/ThemeContext";
 import Login from "./pages/Login";
 
-// 🟢 Real pages import
+
 import Users from "./pages/Users";
 import Tenants from "./pages/Tenants";
 import Team from "./pages/Team";
-import AdminNotifications from "./pages/AdminNotifications"; // ✅ New import
+import AdminNotifications from "./pages/AdminNotifications"; 
 import { useTheme } from "./context/ThemeContext";
 function Dashboard() {
   const { theme } = useTheme();

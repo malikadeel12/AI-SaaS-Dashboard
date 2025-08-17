@@ -5,7 +5,7 @@ import { requireRoles } from "../middleware/roleMiddleware.js";
 
 const router = Router();
 
-// Only SuperAdmin can manage tenants
+
 router.post("/", authenticate, requireRoles("SuperAdmin"), createTenant);
 router.get("/", authenticate, requireRoles("SuperAdmin"), listTenants);
 router.post("/:tenantId/admin", authenticate, requireRoles("SuperAdmin"), createTenantAdmin);

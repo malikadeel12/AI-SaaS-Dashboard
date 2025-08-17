@@ -15,7 +15,7 @@ export default function Login() {
     try {
       const res = await api.post("/auth/login", { email, password });
       login(res.data.user, res.data.accessToken);
-      navigate("/"); // 👈 successful login ke baad redirect
+      navigate("/"); 
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
     }

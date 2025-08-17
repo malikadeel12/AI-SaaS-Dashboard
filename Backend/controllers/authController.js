@@ -86,8 +86,6 @@ export const logout = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
-
-// (Optional) Register user within a tenant (Admin/SuperAdmin only) — used in userController normally
 export const me = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).populate("tenant");

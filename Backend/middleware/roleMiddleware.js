@@ -8,7 +8,6 @@ export const requireRoles = (...roles) => {
   };
 };
 
-// For tenant scoping: ensures resource belongs to same tenant as user (except SuperAdmin)
 export const enforceSameTenant = (req, res, next) => {
   if (req.user.role === "SuperAdmin") return next();
   const tenantId = req.user.tenant?.toString();

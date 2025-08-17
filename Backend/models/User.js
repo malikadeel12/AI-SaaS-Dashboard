@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema(
     password: { type: String, required: true, minlength: 6 },
     tenant: { type: mongoose.Schema.Types.ObjectId, ref: "Tenant", required: true },
     role: { type: String, enum: ["SuperAdmin", "Admin", "Manager", "User"], default: "User" },
-    refreshTokens: [{ type: String }] // active refresh tokens for this user
+    refreshTokens: [{ type: String }]
   },
   { timestamps: true }
 );

@@ -5,15 +5,12 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light");
-
-  // Load saved theme
   useEffect(() => {
     const saved = localStorage.getItem("theme") || "light";
     setTheme(saved);
     document.body.classList.toggle("dark-theme", saved === "dark");
   }, []);
 
-  // Toggle theme
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);

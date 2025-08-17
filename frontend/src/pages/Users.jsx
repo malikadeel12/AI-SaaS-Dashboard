@@ -67,9 +67,6 @@ export default function Users() {
           <option value="Manager">Manager</option>
           <option value="Admin">Admin</option>
         </select>
-
-
-        {/* Tenant input only show if SuperAdmin */}
         {user?.role === "SuperAdmin" && (
           <input
             type="text"

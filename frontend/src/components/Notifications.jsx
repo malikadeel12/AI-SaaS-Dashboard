@@ -45,7 +45,6 @@ export default function Notifications() {
     fetchNotifications();
   }, []);
 
-  // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -60,7 +59,6 @@ export default function Notifications() {
 
   return (
     <div className="relative" ref={dropdownRef}>
-      {/* Bell Button */}
       <button onClick={() => setOpen(!open)} className="relative text-2xl">
         🔔
         {unreadCount > 0 && (
@@ -69,8 +67,6 @@ export default function Notifications() {
           </span>
         )}
       </button>
-
-      {/* Dropdown */}
       {open && (
         <div className="absolute right-0 mt-2 w-80 bg-white dark:bg-gray-800 shadow-lg rounded p-3 z-50">
           <div className="flex justify-between items-center mb-2">

@@ -1,10 +1,10 @@
 import express from "express";
 import Notification from "../models/Notification.js";
-import { authenticate} from "../middleware/authMiddleware.js"; // tumhare project me ye honge
+import { authenticate} from "../middleware/authMiddleware.js"; 
 
 const router = express.Router();
 
-// Get notifications for logged-in user
+
 router.get("/", authenticate, async (req, res) => {
   try {
     const notifications = await Notification.find({ user: req.user.id }).sort({
@@ -16,7 +16,6 @@ router.get("/", authenticate, async (req, res) => {
   }
 });
 
-// Create new notification (Admin/SuperAdmin only)
 router.post("/", authenticate, async (req, res) => {
   try {
     const { userId, message } = req.body;
