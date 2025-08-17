@@ -32,5 +32,5 @@ project-root/
 │── README.md       # Project documentation (this file)  
 ⚡ Setup Instructions
 1️⃣ Clone the Repository
-git clone https://github.com/your-username/saas-rbac-dashboard.git
-cd saas-rbac-dashboard
+git clone https://github.com/malikadeel12/AI-SaaS-Dashboard.git
+cd AI-SaaS-Dashboard
